@@ -59,28 +59,15 @@ VALUES
 -- Updates nas tabelas tb_cliente e tb_treino 
 -- -------------------------------------------------------
 
-UPDATE `anafit`.`tb_cliente`
+UPDATE `anafit`.`tb_treino`
 SET 
-  `primeironome` = '', 
-  `sobrenome` = '', 
-  `datanasc` = '', 
-  `peso` = '', 
-  `altura` = '', 
-  `whatsapp` = '', 
-  `email` = '', 
-  `rua` = '', 
-  `numero` = '',
-  `complemento` = '', 
-  `cep` = ''
-WHERE `cpf` = ''; 
-
+  `diadasemana` = '2024-03-14' 
+WHERE `tipo` = 'Musculação' AND `diadasemana` = "2025-03-10";
 
 UPDATE `anafit`.`tb_treino`
 SET 
-  `diadasemana` = '', 
-  `horario` = '', 
-  `tipo` = ''
-WHERE `cpf_cliente` = '';
+  `horario` = '15:00:00'
+WHERE `horario` IN('18:00:00', '06:30:00');
 
 
 DELETE FROM `anafit`.`tb_treino` WHERE `tipo` = 'Ciclismo';
