@@ -155,6 +155,30 @@ WHERE
   c.`cpf` = 12345678911;
 
 -- -------------------------------------------------------
+-- SELECT DADO QUE CONTENHA A LETRA "letra"
+-- -------------------------------------------------------
+SELECT * FROM `cliente`
+WHERE `primeironome` LIKE '%a%';
+
+SELECT * FROM `cliente`
+WHERE `primeironome` LIKE '%e%';
+
+SELECT * FROM `cliente`
+WHERE `primeironome` LIKE '%João%';
+
+SELECT * FROM `cliente`
+WHERE `primeironome` LIKE '%a%' AND `sobrenome` LIKE '%s%' ;
+
+SELECT * FROM `cliente`
+WHERE `primeironome` LIKE '%João%' AND `sobrenome` LIKE '%Silva%' ;
+
+SELECT * FROM `pagamento`
+WHERE CAST(`valor` AS CHAR) LIKE "%150.00%"
+
+SELECT * FROM `pagamento`
+WHERE CAST(`valor` AS CHAR) LIKE "%00"
+
+-- -------------------------------------------------------
 -- DELETE nas tabelas cliente e treino 
 -- -------------------------------------------------------
 DELETE FROM `anafit`.`treino` WHERE `tipo` = 'Ciclismo';
